@@ -29,4 +29,7 @@ def create_app(test_config=None):
     def hello():
         return '<h1 style="color:red">Hello, World!<h1>'
 
+    from . import db
+    db.init_app(app)
+
     return app
